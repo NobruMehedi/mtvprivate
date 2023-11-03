@@ -1,31 +1,34 @@
-<html>
 <head>
-  </head>
+<title>Powred By NobruWeb</title>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@clappr/player@latest/dist/clappr.min.js">
+</script>
+  <script type="text/javascript" src="//cdn.jsdelivr.net/npm/clappr@latest/dist/clappr.min.js"></script>
+  <script type="text/javascript" src="//cdn.jsdelivr.net/gh/ewwink/clappr-quality-selector-plugin@latest/quality-selector.js"></script> <script src="https://cdn.jsdelivr.net/npm/clappr-pip-plugin@latest/dist/clappr-pip-plugin.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/clappr-stats/dist/clappr-stats.min.js"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/clappr-nerd-stats/dist/clappr-nerd-stats.min.js"></script>
+<script src='https://cdn.jsdelivr.net/npm/@clappr/hlsjs-playback@latest/dist/hlsjs-playback.min.js'></script>
+<script type="text/javascript" script src="https://cdn.jsdelivr.net/npm/clappr-chromecast-plugin@latest/dist/clappr-chromecast-plugin.min.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/clappr/dash-shaka-playback@latest/dist/dash-shaka-playback.js"></script>
+  <script type="text/javascript" src="http://cdn.clappr.io/latest/clappr.min.js"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/clappr-pip-plugin@latest/dist/clappr-pip-plugin.js"></script>
+</head>
+</head>
 <body>
-  <div class='video'>
-  <script src="//content.jwplatform.com/libraries/SAHhwvZq.js"></script>
-<script type="text/javascript" src="//content.jwplatform.com/libraries/SAHhwvZq.js"></script>
-		<script type="text/javascript">jwplayer.key = 'ypdL3Acgwp4Uh2/LDE9dYh3W/EPwDMuA2yid4ytssfI=';</script><div id="myElement"></div><script type="text/javascript">
-					    jwplayer("myElement").setup({
-								image: "https://content.jwplatform.com/thumbs/xJ7Wcodt-720.jpg",
+  <div id="player"></div>
+  <script>
+    var player = new Clappr.Player({source:
 
-width: '100%',						    		hight: "100%",														    		autostart: true,
-mute: false,
-file : 
-     
-      
-                'https://prod-ent-live-gm.jiocinema.com:443/bpk-tv/MTV_HD_Plus_voot_MOB/Fallback/index.m3u8',
- 
-  
+      "https://prod-ent-live-gm.jiocinema.com:443/bpk-tv/MTV_HD_Plus_voot_MOB/Fallback/index.m3u8",
 
+ parentId: "#player", plugins: [QualitySelector,ClapprPIPPlugin,ClapprNerdStats,ClapprStats,HlsjsPlayback,ChromecastPlugin,DashShakaPlayback,ClapprPIPPlugin,],
+autoPlay: true,
+exitFullscreenOnEnd: false,
+mute: true,
+aspectratio: '16:09',
+width: '100%',
+debug: true,
+live: true,
 
-
-				abouttext: 'NobruWeb',
-				aboutlink: 'https://t.me/NobruMehedi',
-				captions: {color: '#ffb800',fontSize: 30,backgroundOpacity: 0},
-				
-						    })
-					</script>
-  </div>
-  </body>
-</html>
+});
+  </script>
+</body>
